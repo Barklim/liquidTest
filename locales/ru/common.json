@@ -1,0 +1,27 @@
+{
+  "404_back": "Вернуться на главную страницу",
+  "404_title": "Страница не найдена",
+  "meta": {
+    "title": "Liquid Wage | Доступ к зарплате в любое время",
+    "desc": "Дайте вашим сотрудникам возможность снимать зарплату в любое время и станьте лучшим работодателем."
+  },
+  "header": {
+    "item1": "Работодателям",
+    "item2": "Работникам",
+    "item3": "Блог"
+  },
+  "footer": {
+    "facebook": "Ссылка на Facebook",
+    "facebook_link": "https://www.facebook.com/Liquidwage-%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F-354207205615650",
+    "instagram": "Ссылка на Instagram",
+    "item1": "Работодателям",
+    "item2": "Работникам",
+    "item3": "Блог",
+    "line1": "© Copyright 2021 Liquidwage Россия",
+    "line2": "Пишите нам: ",
+    "email": "mail@liquidwage.com",
+    "line3": "",
+    "linkedin": "Ссылка на LinkedIn",
+    "twitter": "Ссылка на Twitter"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "login": "Log in",
+  "signup": "Sign up",
+  "faq": {
+    "a1": "No, it’s not. We only give access to earned wages.",
+    "a2": "You only need be employed by one of our employer partners and have a laptop to access our web app through this website.",
+    "a3": "You can register your interest down below, so that we can approach your employer given the sufficient demand for the service. So tell your colleagues as well : )",
+    "q1": "Is this a credit?",
+    "q2": "What is required to use Liquidwage?",
+    "q3": "My employer does not offer Liquidwage, what can I do?"
+  },
+  "s1": {
+    "desc": "Access your earned pay, whenever you need it via liquidwage web app",
+    "title": "Embrace the power of liquidity"
+  },
+  "s2": {
+    "item1": "Smooth finance in between paydays",
+    "item2": "No more high-cost credit",
+    "item3": "Unlock your paycheck potential",
+    "item4": "Ability to track earnings and plan ahead",
+    "item5": "Financial security in case of the unexpected"
+  },
+  "s3": {
+    "desc": "All data is encrypted and stored in the UK. We don't share or sell data. We have no ads, no ad trackers, and no social media trackers.",
+    "title": "Liquidwage is built privacy and security first"
+  },
+  "s4": {
+    "title": "FAQ"
+  },
+  "s5": {
+    "title": "Are you liquid?"
+  },
+  "form": {
+    "required": "This field is required",
+    "submitted": "Form has been submitted",
+    "subscribe": "Subscribe",
+    "email": "Email",
+    "title": "More financial wellbeing tools coming soon",
+    "title2": "Want to be updated?"
+  }
+}

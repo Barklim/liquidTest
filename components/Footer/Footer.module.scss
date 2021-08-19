@@ -1,0 +1,104 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+
+  &__wrapper {
+    padding-top: 56px;
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    z-index: 2;
+    border-top: 7px solid #f2f9fd;
+    @media screen and (max-width: 1024px) {
+      max-width: 768px;
+      padding-top: 56px;
+      margin: 0 20px;
+      // box-sizing: border-box;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 580px;
+    }
+    @media screen and (max-width: 640px) {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 480px) {
+      // max-width: 280px;
+    }
+  }
+  &__navigation {
+    margin-top: 44px;
+    @media screen and (max-width: 640px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__copyright {
+    margin-top: 28px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #3a3a3a;
+  }
+  &__link {
+    margin-right: 28px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 128%;
+    color: #3a3a3a;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 640px) {
+      display: block;
+      margin-bottom: 16px;
+    }
+    &.active,
+    &:hover {
+      color: #28a5eb;
+    }
+  }
+  &__email {
+    color: #28a5eb;
+    cursor: pointer;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  &__link {
+    display: block;
+    margin-right: 48px;
+    height: 24px;
+    width: 24px;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.fb {
+      height: 20px;
+      width: 20px;
+      background-image: url('/images/fb.svg');
+    }
+    &.ig {
+      background-image: url('/images/ig.svg');
+    }
+    &.tw {
+      background-image: url('/images/tw.svg');
+    }
+    &.ln {
+      background-image: url('/images/ln.svg');
+    }
+  }
+}
+
+a span {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}

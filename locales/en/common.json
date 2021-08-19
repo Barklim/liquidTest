@@ -1,0 +1,25 @@
+{
+  "404_back": "Back to home page",
+  "404_title": "Page not found",
+  "meta": {
+    "title": "Liquidwage | Innovative Financial Solutions for your workforce",
+    "desc": "Enable your employees to access their real-time earned wages whenever they need, make sure they don’t have to use high-cost short-term credit and every worker has savings."
+  },
+  "header": {
+    "item1": "For employers",
+    "item2": "For employees",
+    "item3": "Blog"
+  },
+  "footer": {
+    "facebook": "Link to Facebook page",
+    "facebook_link": "https://facebook.com/liquidwage",
+    "instagram": "Link to Instagram page",
+    "item1": "For employers",
+    "item2": "For employees",
+    "item3": "Blog",
+    "line1": "© Copyright 2021 Liquidwage Technology Ltd",
+    "line2": "Liquidwage Technology Ltd is Registered and Incorporated in England and Wales,",
+    "email": "",
+    "line3": "company registration number 13000929."
+  }
+}

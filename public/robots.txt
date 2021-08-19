@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://liquidwage.com
+
+# Sitemaps
+Sitemap: https://liquidwage.com/sitemap.xml

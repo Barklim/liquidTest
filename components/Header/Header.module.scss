@@ -1,0 +1,213 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/header.svg');
+  background-position: 50% 0;
+  background-repeat: repeat-x;
+
+  @media screen and (max-width: 640px) {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    background-color: #fff;
+    background-image: none;
+    z-index: 20;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+
+    background: #f2f9fd;
+    z-index: 1;
+    top: -20px;
+    left: calc(50% + 350px);
+    width: 479px;
+    height: 479px;
+    border-radius: 480px;
+    @media screen and (max-width: 1024px) {
+      left: calc(50% + 200px);
+    }
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 76px;
+    width: 100%;
+    max-width: 980px;
+    z-index: 2;
+    @media screen and (max-width: 1024px) {
+      max-width: 768px;
+      padding: 76px 20px 0;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: 580px;
+    }
+    @media screen and (max-width: 640px) {
+      max-width: 100%;
+      padding-top: 0;
+    }
+    @media screen and (max-width: 480px) {
+      // max-width: 280px;
+    }
+  }
+  &__logo {
+    width: 276.92px;
+    height: 36px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('/images/logo-header.svg');
+    cursor: pointer;
+    @media screen and (max-width: 1200px) {
+      height: 20px;
+      width: 153px;
+    }
+    @media screen and (max-width: 640px) {
+      margin-left: 32px;
+      margin-top: 4px;
+    }
+  }
+  &__menu {
+    margin-left: auto;
+    @media screen and (max-width: 640px) {
+      padding: 28px 20px;
+      position: fixed;
+      left: 0;
+      top: 56px;
+      height: calc(100vh - 56px);
+      width: 100vw;
+      background: #fff;
+      display: none;
+      z-index: 20;
+      box-sizing: border-box;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  &__mobile-btn {
+    display: none;
+    width: 24px;
+    height: 14px;
+    background-image: url('/images/burger.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    @media screen and (max-width: 640px) {
+      display: block;
+    }
+
+    &.close {
+      background-image: url('/images/cross.svg');
+    }
+  }
+  &__link {
+    margin-left: 40px;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.16em;
+    color: #0e4e89;
+    transition: 0.2s;
+    text-decoration: none;
+    text-transform: uppercase;
+    @media screen and (max-width: 1024px) {
+      margin-left: 24px;
+      font-size: 14px;
+      line-height: 128%;
+      letter-spacing: normal;
+    }
+    @media screen and (max-width: 640px) {
+      display: block;
+      margin-bottom: 24px;
+      margin-left: 0;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.16em;
+      color: #0e4e89;
+
+      &.lang {
+        display: block !important;
+      }
+    }
+    &.active,
+    &:hover {
+      color: #28a5eb;
+    }
+    &:last-of-type {
+      margin-right: 40px;
+    }
+    &.lang {
+      display: none;
+      cursor: pointer;
+
+      span {
+        vertical-align: top;
+        display: inline-block;
+        position: relative;
+        top: initial;
+        margin-left: 16px;
+        overflow: visible;
+        height: auto;
+        width: auto;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__lang {
+    position: absolute;
+    top: 86px;
+    right: 4px;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+    @media screen and (max-width: 1200px) {
+      top: 78px;
+    }
+  }
+
+  &__langs {
+    display: none;
+    position: absolute;
+    width: 150px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: -130px;
+    background: #fdfdfd;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    filter: drop-shadow(0px 0px 32px rgba(0, 0, 0, 0.08));
+
+    &.active {
+      display: block;
+    }
+    div {
+      vertical-align: top;
+      span {
+        vertical-align: top;
+        display: inline-block;
+        position: relative;
+        top: initial;
+        margin-left: 16px;
+        overflow: visible;
+        height: auto;
+        width: auto;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .li_item:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}

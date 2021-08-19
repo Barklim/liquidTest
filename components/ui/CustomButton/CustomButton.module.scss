@@ -1,0 +1,31 @@
+.button {
+  height: 44px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 0.2s;
+  cursor: pointer;
+  border: none;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 128%;
+
+  color: #fdfdfd;
+  background: #28a5eb;
+  border-radius: 12px;
+
+  &.disabled {
+    background: #e5e5e5;
+    &:before {
+      border-color: #e5e5e5;
+    }
+    color: #fff;
+    pointer-events: none;
+  }
+}

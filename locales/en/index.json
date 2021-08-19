@@ -1,0 +1,73 @@
+{
+  "contactus": "Contact us",
+  "demo": "Schedule a demo",
+  "demo-message": "I would like to request a Liquidwage demo",
+  "partnerships": "We partner up with savvy employers to supply their team with financial tools that are more efficient and cheaper than the market. Together we have the ability to make a shift far greater than change the way people get paid but achieve a true financial wellbeing.",
+  "faq": {
+    "a1": "No, it’s not. We only give access to earned wages.",
+    "a2": "Willingness to improve financial wellbeing of your employees and integration with your payroll and time-management systems.",
+    "a3": "No worries, we can still work with you. We take bespoke approach to each and every business.",
+    "a4": "It does not. Experience is absolutely seamless with no changes to cash flow or workflow. Its business as usual, but with better financial stability for your employees.",
+    "a5": "1 week.",
+    "a6": "We are plug&play platform. So, in case if you find Liquidwage to be a bad fit for your business, you can instantly plug out and finish working with us without any problems.",
+    "q1": "Is this a credit?",
+    "q2": "What is required to launch Liquidwage with our business?",
+    "q3": "What if we don’t use software?",
+    "q4": "How does it change our day-to-day operations?",
+    "q5": "How long does it usually take to roll out?",
+    "q6": "What if we want to opt out?",
+    "title": "FAQ"
+  },
+  "s1": {
+    "desc": "We enable employees to access their real-time earned wages, so that they can focus on their jobs and enjoy employee experience.",
+    "step1": "78% of workers use finance options in between pay days",
+    "step2": "Unarranged overdrafts, high-cost short-term credit has negative impact on personal finance and wellbeing",
+    "step3": "Poor performance at work, increased attrition and absenteeism",
+    "title": "Financial security and liquidity in the workplace"
+  },
+  "s2": {
+    "item1": "Give immediate reward for a good day of work",
+    "item2": "Build an efficient retention scheme",
+    "item3": "Improve employee experience",
+    "item4": "Ensure that your employees do not miss a payment in their lives",
+    "item5": "No changes to payroll or pay cycles",
+    "item6": "No changes to cashflow or workflow",
+    "item7": "Seamless integration with payroll and time-management software",
+    "item8": "No cost to business, we provide liquidity",
+    "t1": "Improve your team and business",
+    "t2": "Plug and play solution"
+  },
+  "s3": {
+    "desc": "All data is encrypted and stored in the UK. We don't share or sell data. We have no ads, no ad trackers, and no social media trackers.",
+    "title": "Liquidwage is built privacy and security first"
+  },
+  "s4": {
+    "case1_1": "We have partnered up with Café Brera to launch real-time wage access for their workers. Employees used Liquidwage Web Application to track their earnings and make a withdrawal (up to 50% of earned salary).",
+    "case1_2": "Within the first 3 months:",
+    "case1_3": "51% of employees have signed up",
+    "case1_4": "+£12,000 of transactions processed",
+    "case1_5": "Stellar feedback from users",
+    "case1_6": "Financial wellbeing is one of the key drivers of a sustainable workforce, but don’t take our word for it.",
+    "case2_1": "Guru",
+    "case2_2": "Director at Café Brera",
+    "case2_3": "We wanted to improve our employee benefits and increase retention. Liquidwage proved to be invaluable and has had positive impact on employee experience, retention and recruitment. Instant wage access made our employee package much more attractive and we are looking forward to a productive relationship with Liquidwage to help our employees with their finance.",
+    "case3_1": "Imane",
+    "case3_2": "Team member at Café Brera",
+    "case3_3": "My previous tenant would not release the deposit in time for me to secure my new place. Thanks to Liquidwage, I have been able to access my earned wage before payday and make a deposit for my new apartment. You always have this back up now instead of using expensive credit. It’s perfect!",
+    "case4_1": "Nikita",
+    "case4_2": "Chef at Café Brera",
+    "case4_3": "It's incredible! I feel more financially secure than I have ever been in my life. Even when I don’t use it, simply knowing that I can access my wages whenever I want - gives me peace of mind and allows me to focus on my job.",
+    "case5_1": "Serhii",
+    "case5_2": "Founder at Liquidwage",
+    "case5_3": "It has been a great experience for us to work with an employer like Café Brera that is constantly looking to go an extra mile for their employees. We are looking forward to launching more financial tools and keep improving financial wellbeing of their employees!",
+    "title": "CASE STUDY"
+  },
+  "s5": {
+    "desc": "Provide the best financial benefits to your employees",
+    "title": "Join our financial wellbeing revolution"
+  },
+  "s6": {
+    "link": "Learn more",
+    "title": "Are you an employee?"
+  }
+}
