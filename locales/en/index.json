@@ -69,5 +69,19 @@
   "s6": {
     "link": "Learn more",
     "title": "Are you an employee?"
+  },
+  "form": {
+    "title": "Schedule a demo",
+    "name": "Name",
+    "email": "Email",
+    "tel": "Phone",
+    "agreement": "I accept the terms of the user agreement and the privacy policy",
+    "subscribe": "Submit",
+    "required_name": "Name is required",
+    "required_name_min": "Name must have at least 3 characters",
+    "required_email": "Email is required",
+    "required_tel": "Telephone number is required",
+    "required": "Accept the agreement",
+    "result": "Form has been submitted!"
   }
 }

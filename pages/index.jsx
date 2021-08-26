@@ -2,26 +2,27 @@ import cls from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Carousel from '@brainhubeu/react-carousel';
+import { useState } from 'react';
 
 import styles from '../styles/Page.module.scss';
 import CustomButton from '../components/ui/CustomButton';
 import CustomLink from '../components/ui/CustomLink';
 import Accordion from '../components/ui/Accordion';
-
-import { useRouter } from 'next/router';
+import Modal from '../components/ui/CustomModal';
+import CustomInput from '../components/ui/CustomInput';
+import DemoForm from '../components/forms/DemoForm';
 
 const handleScheduleDemo = (t) => {
-  $crisp.push(['do', 'chat:open']);
-  $crisp.push(['do', 'chat:show']);
-  $crisp.push(['do', 'message:send', ['text', t('demo-message')]]);
+  // $crisp.push(['do', 'chat:open']);
+  // $crisp.push(['do', 'chat:show']);
+  // $crisp.push(['do', 'message:send', ['text', t('demo-message')]]);
+  alert('1');
 };
 
 export default function Index() {
   const { t, lang } = useTranslation('index');
 
-  const router = useRouter();
-  console.log('!!!');
-  console.log(router.locale);
+  const [show, setShow] = useState(false);
 
   const faqListLeft = [
     {
@@ -55,7 +56,7 @@ export default function Index() {
 
   const demoButtons = (
     <>
-      <CustomButton className={styles.introduction__button} text={t('demo')} onClick={() => handleScheduleDemo(t)} />
+      <CustomButton className={styles.introduction__button} text={t('demo')} onClick={() => setShow(true)} />
       <CustomButton
         className={styles.introduction__button}
         text={t('contactus')}
@@ -71,6 +72,9 @@ export default function Index() {
 
   return (
     <div className={styles.container}>
+      <Modal className={styles.modal} show={show} onClose={() => setShow(false)}>
+        <DemoForm />
+      </Modal>
       <section className={cls([styles.section, styles['introduction-section']])}>
         <div
           className={cls([styles.introduction, styles.bg_workplace])}

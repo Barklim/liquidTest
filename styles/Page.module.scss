@@ -17,6 +17,10 @@
   @media screen and (max-width: 1024px) {
     margin-top: 24px;
   }
+
+  &__input {
+    padding: 10px;
+  }
 }
 .section {
   position: relative;
@@ -557,8 +561,6 @@
 }
 
 .slider {
-  // position: relative;
-
   &__item {
     margin-right: 20px;
     width: 632px !important;

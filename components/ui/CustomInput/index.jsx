@@ -1,7 +1,7 @@
-import React from 'react'
-import cls from 'classnames'
+import React from 'react';
+import cls from 'classnames';
 
-import styles from './CustomInput.module.scss'
+import styles from './CustomInput.module.scss';
 
 const Input = ({
   inputName = '',
@@ -33,7 +33,7 @@ const Input = ({
         disabled={inputDisable}
         ref={inputRef}
       />
-    )
+    );
   } else {
     return (
       <div className={styles.input_wrapper}>
@@ -56,8 +56,8 @@ const Input = ({
           ref={inputRef}
         />
       </div>
-    )
+    );
   }
-}
+};
 
-export default Input
+export default Input;

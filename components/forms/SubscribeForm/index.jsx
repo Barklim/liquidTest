@@ -1,27 +1,23 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import useTranslation from 'next-translate/useTranslation'
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import useTranslation from 'next-translate/useTranslation';
 
-import CustomInput from '../../ui/CustomInput'
-import CustomButton from '../../ui/CustomButton'
+import CustomInput from '../../ui/CustomInput';
+import CustomButton from '../../ui/CustomButton';
 
-import styles from './SubscriberForm.module.scss'
+import styles from './SubscriberForm.module.scss';
 
 const SubscribeForm = () => {
-  const { t } = useTranslation('employees')
-  const { register, handleSubmit, errors } = useForm()
-  const [submited, setSubmited] = useState(false)
+  const { t } = useTranslation('employees');
+  const { register, handleSubmit, errors } = useForm();
+  const [submited, setSubmited] = useState(false);
 
   const onSubmit = (data) => {
-    const date = new Date().toString()
-    $crisp.push(['set', 'user:email', data.email])
-    $crisp.push([
-      'set',
-      'session:event',
-      [[['emplyee_subscribe', { date }, 'black']]],
-    ])
-    setSubmited(true)
-  }
+    const date = new Date().toString();
+    $crisp.push(['set', 'user:email', data.email]);
+    $crisp.push(['set', 'session:event', [[['emplyee_subscribe', { date }, 'black']]]]);
+    setSubmited(true);
+  };
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -42,31 +38,20 @@ const SubscribeForm = () => {
                 inputPlaceholder={t('form.email')}
               />
               <div>
-                <CustomButton
-                  className={styles.form__button}
-                  type="submit"
-                  text={t('form.subscribe')}
-                />
+                <CustomButton className={styles.form__button} type="submit" text={t('form.subscribe')} />
               </div>
             </div>
-            {errors.email && (
-              <span className={styles.form__error_label}>
-                {t('form.required')}
-              </span>
-            )}
+            {errors.email && <span className={styles.form__error_label}>{t('form.required')}</span>}
           </div>
         </>
       )}
       {submited && (
         <div className={styles.form__result}>
-          <FormattedMessage
-            id="form.subscribe.submitted"
-            defaultMessage="Form has been submitted"
-          />
+          <FormattedMessage id="form.subscribe.submitted" defaultMessage="Form has been submitted" />
         </div>
       )}
     </form>
-  )
-}
+  );
+};
 
-export default SubscribeForm
+export default SubscribeForm;
