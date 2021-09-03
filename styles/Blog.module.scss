@@ -183,3 +183,70 @@
     }
   }
 }
+
+.article {
+  &__header {
+    padding: 0 200px;
+    box-sizing: border-box;
+    @media screen and (max-width: 1200px) {
+      padding: 0 84px;
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 0 60px;
+    }
+  }
+  &__header_h1 {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    color: #3a3a3a;
+  }
+  &__body {
+    position: relative;
+    margin-top: 32px;
+    width: 100%;
+    padding: 48px 200px;
+    background: #ffffff;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 160%;
+    box-sizing: border-box;
+    // z-index: 3;
+    // white-space: pre-line;
+    @media screen and (max-width: 1200px) {
+      padding: 48px 84px;
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 48px 60px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 317px;
+      height: 317px;
+      left: calc(50% - 700px);
+      top: 100px !important;
+      border-radius: 320px;
+      background: #f2f9fd;
+      z-index: -1;
+      @media screen and (max-width: 1200px) {
+        left: -30px;
+      }
+      @media screen and (max-width: 1024px) {
+        left: -140px;
+        top: 280px;
+      }
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

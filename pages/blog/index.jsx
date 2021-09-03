@@ -1,55 +1,40 @@
-import Link from 'next/link';
-import useTranslation from 'next-translate/useTranslation';
+import axios from 'axios';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import ArticleItem from '../../components/Blog/';
 
 import styles from '../../styles/Blog.module.scss';
 
 const Blog = () => {
-  const { t } = useTranslation('blog');
-  const posts = t('posts', {}, { returnObjects: true });
-  const { lang } = useTranslation('');
+  const router = useRouter();
+  let lang = router.locale;
+  const [books, getBooks] = useState([{ id: 1, default: true }]);
+  const [data, isLoaded] = useState(false);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = () => {
+    axios
+      .get(`http://localhost:8000//wp-json/wp/v2/blog?lang=${lang}`)
+      // .get(`https://liquidwage123123.000webhostapp.com/wp-json/wp/v2/blog?lang=${lang}`)
+      .then((response) => {
+        const allBooks = response.data;
+        getBooks(allBooks);
+        isLoaded(true);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.blog}>
-        <div className={styles.blog__pic} />
-        <div className={styles.blog__list}>
-          <div className={styles.blog_posts}>
-            {lang === 'ru' && (
-              <>
-                <Link href="/blog/mission">
-                  <div className={styles.blog_posts__item}>
-                    <div className={styles.blog_posts__title}>Миссия</div>
-                    <div className={styles.blog_posts__desc}>
-                      Мы хотим, чтобы люди как можно реже обращались в микрокредитные компании за кредитом под высокий
-                      процент, чтобы вылечить зубы, оплатить ремонт, купить одежду.
-                    </div>
-                  </div>
-                </Link>
-                <Link href="/blog/brera">
-                  <div className={styles.blog_posts__item}>
-                    <div className={styles.blog_posts__title}>
-                      Как сеть кафе уменьшила текучку кадров на 25% за три месяца
-                    </div>
-                    <div className={styles.blog_posts__desc}>
-                      За три месяца Cafe Brera сократило текучку и увеличило удовлетворенность работой сотрудников
-                      просто разрешив им брать зарплату в любой момент.
-                    </div>
-                  </div>
-                </Link>
-              </>
-            )}
-            {posts.map((item, index) => {
-              return (
-                <Link href={`/blog/${index}`} key={index}>
-                  <div className={styles.blog_posts__item}>
-                    <div className={styles.blog_posts__title}>{item.title}</div>
-                    <div className={styles.blog_posts__desc}>{item.desc}</div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+    <div>
+      <div className={styles.container}></div>
+      {!isLoaded && <div className={styles.form__error_label}>loading...</div>}
+      <div>
+        {books.map((book) => (
+          <ArticleItem key={book.id} article={book} />
+        ))}
       </div>
     </div>
   );
