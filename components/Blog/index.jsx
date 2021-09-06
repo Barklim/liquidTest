@@ -10,7 +10,6 @@ function ArticleItem({ article }) {
   const [artAuthor, loadedArtAuthor] = useState('');
   const [data, isLoaded] = useState(false);
 
-  // let id = article.id;
   let slug = article.slug;
   let title = article.title?.rendered;
   let excerpt = article.excerpt?.rendered;
@@ -40,18 +39,16 @@ function ArticleItem({ article }) {
   };
 
   return (
-    <div className={styles.X}>
+    <div className={styles.article__item}>
       {!isLoaded && <div className={styles.X}>loading...</div>}
       {isLoaded && (
-        <div className={styles.article__wrapper}>
-          <Link href={`/blog/${slug}`}>
-            <a>
-              <div className={styles.article__header}>{title}</div>
-              {!!imgUrl && <img className={styles.article__img} src={imgUrl} alt={title}></img>}
-              <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-            </a>
-          </Link>
-        </div>
+        <Link href={`/blog/${slug}`}>
+          <a>
+            <div className={styles.article__header}>{title}</div>
+            {!!imgUrl && <img className={styles.article__img} src={imgUrl} alt={title}></img>}
+            <div className={styles.article__body} dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+          </a>
+        </Link>
       )}
     </div>
   );

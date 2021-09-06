@@ -26,12 +26,11 @@ const Post = () => {
     Promise.all([getArticle]).then((res) => {
       isLoaded(false);
       loadedArticle(res[0].data[0]);
-      console.log('🚀 ~ file: [id].jsx ~ line 31 ~ Promise.all ~ res', res);
     });
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       {!isLoaded && <div className={styles.loading}>loading...</div>}
       {isLoaded && (
         <div className={styles.article__wrapper}>

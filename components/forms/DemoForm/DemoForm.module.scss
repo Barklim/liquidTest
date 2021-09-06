@@ -1,21 +1,7 @@
-// .form {
-//   display: flex;
-//   align-items: center;
-//   @media screen and (max-width: 1200px) {
-//     display: block;
-//   }
-//   &__input_container {
-//     margin-top: 16px;
-//     display: flex;
-//     align-items: center;
-//     @media screen and (max-width: 1200px) {
-//       margin-top: 20px;
-//     }
-//     @media screen and (max-width: 640px) {
-//       display: block;
-//     }
-//   }
-// }
+.link {
+  color: #28a5eb;
+  text-decoration: underline;
+}
 
 .form {
   height: 100%;
@@ -24,13 +10,8 @@
   @media screen and (max-width: 1200px) {
     // display: block;
   }
-  &__wrapper {
-    // flex: 1;
-  }
   &__input {
-    // margin-bottom: 1rem;
     margin-bottom: 0.75rem;
-    // border-color: #28a5eb;
   }
   &__wrapButton {
     float: right;
@@ -49,7 +30,6 @@
   }
   // https://itchief.ru/html-and-css/styling-checkbox-and-radio
   &__customCheckbox {
-    // top: 2px;
     top: 6px;
     left: 6px;
     position: relative;

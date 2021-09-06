@@ -28,10 +28,10 @@ const Blog = () => {
   };
 
   return (
-    <div>
-      <div className={styles.container}></div>
+    <div className={styles.article}>
+      <div className={styles.article__pic}></div>
       {!isLoaded && <div className={styles.form__error_label}>loading...</div>}
-      <div>
+      <div className={styles.article__container}>
         {books.map((book) => (
           <ArticleItem key={book.id} article={book} />
         ))}

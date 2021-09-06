@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import useTranslation from 'next-translate/useTranslation';
+import { useRouter } from 'next/router';
 
 import CustomInput from '../../ui/CustomInput';
 import CustomButton from '../../ui/CustomButton';
@@ -10,7 +11,14 @@ import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 
 const DemoForm = () => {
+  const router = useRouter();
+  let lang = 'US';
+  router.locale === 'ru' ? (lang = 'RU') : null;
+  router.locale === 'kk' ? (lang = 'KZ') : null;
   const { t } = useTranslation('index');
+  console.log('!!!');
+  console.log(lang);
+  console.log('!!!');
   const {
     register,
     handleSubmit,
@@ -59,6 +67,7 @@ const DemoForm = () => {
               )}
               <div className={styles.form__error_label}>{errors.name?.message}</div>
               <CustomInput
+                inputType="email"
                 inputClass={styles.form__input}
                 inputName="email"
                 inputRef={register({
@@ -70,6 +79,7 @@ const DemoForm = () => {
               />
               {errors.email && <div className={styles.form__error_label}>{t('form.required_email')}</div>}
               <PhoneInput
+                defaultCountry={lang}
                 placeholder={t('form.tel')}
                 value={value}
                 onChange={setValue}
@@ -95,7 +105,12 @@ const DemoForm = () => {
                   ></input>
                   <span></span>
                 </label>
-                <div>{t('form.agreement')}</div>
+                <div>
+                  {t('form.agreement_p1')}
+                  <a className={styles.link} href={'/userAgreement.pdf'} download>
+                    {t('form.agreement_p2')}
+                  </a>
+                </div>
               </div>
               <div className={styles.form__wrapButton}>
                 <CustomButton className={styles.form__button} type="submit" text={t('form.subscribe')} />
