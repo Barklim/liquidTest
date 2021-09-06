@@ -16,9 +16,6 @@ const DemoForm = () => {
   router.locale === 'ru' ? (lang = 'RU') : null;
   router.locale === 'kk' ? (lang = 'KZ') : null;
   const { t } = useTranslation('index');
-  console.log('!!!');
-  console.log(lang);
-  console.log('!!!');
   const {
     register,
     handleSubmit,
@@ -107,7 +104,7 @@ const DemoForm = () => {
                 </label>
                 <div>
                   {t('form.agreement_p1')}
-                  <a className={styles.link} href={'/userAgreement.pdf'} download>
+                  <a className={styles.link} href={'/userAgreement.pdf'}>
                     {t('form.agreement_p2')}
                   </a>
                 </div>
