@@ -1,13 +1,13 @@
-import cls from 'classnames'
-import useTranslation from 'next-translate/useTranslation'
+import cls from 'classnames';
+import useTranslation from 'next-translate/useTranslation';
 
-import styles from '../styles/Page.module.scss'
-import CustomButton from '../components/ui/CustomButton'
-import SubscribeForm from '../components/forms/SubscribeForm'
-import Accordion from '../components/ui/Accordion'
+import styles from '../styles/Page.module.scss';
+import CustomButton from '../components/ui/CustomButton';
+import SubscribeForm from '../components/forms/SubscribeForm';
+import Accordion from '../components/ui/Accordion';
 
 export default function Employees() {
-  const { t, lang } = useTranslation('employees')
+  const { t, lang } = useTranslation('employees');
 
   const faqListLeft = [
     {
@@ -18,14 +18,14 @@ export default function Employees() {
       title: t('faq.q2'),
       desc: t('faq.a2'),
     },
-  ]
+  ];
 
   const faqListRight = [
     {
       title: t('faq.q3'),
       desc: t('faq.a2'),
     },
-  ]
+  ];
 
   const loginSignupButtons = (
     <>
@@ -40,22 +40,16 @@ export default function Employees() {
         onClick={() => (window.location = 'https://app.liquidwage.com/signup')}
       />
     </>
-  )
+  );
 
   return (
     <div className={styles.cotainer}>
-      <section
-        className={cls([styles.section, styles['introduction-section']])}
-      >
+      <section className={cls([styles.section, styles['introduction-section']])}>
         <div className={cls([styles.introduction, styles.bg_embrace])}>
           <div className={styles.introduction__wrapper}>
             <h1 className={styles.introduction__title}>{t('s1.title')}</h1>
-            <div className={cls([styles.introduction__desc, styles.first])}>
-              {t('s1.desc')}
-            </div>
-            <div className={styles.introduction__buttons}>
-              {loginSignupButtons}
-            </div>
+            <div className={cls([styles.introduction__desc, styles.first])}>{t('s1.desc')}</div>
+            <div className={styles.introduction__buttons}>{loginSignupButtons}</div>
           </div>
         </div>
       </section>
@@ -93,11 +87,6 @@ export default function Employees() {
         </div>
       </section>
       <section className={styles.section}>
-        <div className={styles.quote}>
-          <SubscribeForm />
-        </div>
-      </section>
-      <section className={styles.section}>
         <div className={styles.privacy}>
           <div className={styles.privacy__wrapper}>
             <div className={styles.privacy__title}>{t('s3.title')}</div>
@@ -115,7 +104,7 @@ export default function Employees() {
                   <div className={styles.faq__item} key={i}>
                     <Accordion title={item.title}>{item.desc}</Accordion>
                   </div>
-                )
+                );
               })}
             </div>
             <div className={styles.faq__col}>
@@ -124,7 +113,7 @@ export default function Employees() {
                   <div className={styles.faq__item} key={i}>
                     <Accordion title={item.title}>{item.desc}</Accordion>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -137,17 +126,16 @@ export default function Employees() {
         >
           <div className={styles.introduction__wrapper}>
             <div className={styles.introduction__title}>{t('s5.title')}</div>
-            <div
-              className={cls([
-                styles.introduction__buttons,
-                styles['small-margin'],
-              ])}
-            >
-              {loginSignupButtons}
-            </div>
+            {/* <div className={styles.introduction__desc}>{t('s5.desc')}</div> */}
+            <div className={cls([styles.introduction__buttons, styles['small-margin']])}>{loginSignupButtons}</div>
           </div>
         </div>
       </section>
+      <section className={styles.section}>
+        <div className={styles.quote}>
+          <SubscribeForm />
+        </div>
+      </section>
     </div>
-  )
+  );
 }

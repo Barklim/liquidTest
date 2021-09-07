@@ -28,7 +28,8 @@
     "title": "FAQ"
   },
   "s5": {
-    "title": "Are you liquid?"
+    "title": "Are you liquid?",
+    "desc": "Sign up for early access"
   },
   "form": {
     "required": "This field is required",
