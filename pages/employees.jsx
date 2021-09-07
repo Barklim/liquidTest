@@ -126,7 +126,6 @@ export default function Employees() {
         >
           <div className={styles.introduction__wrapper}>
             <div className={styles.introduction__title}>{t('s5.title')}</div>
-            {/* <div className={styles.introduction__desc}>{t('s5.desc')}</div> */}
             <div className={cls([styles.introduction__buttons, styles['small-margin']])}>{loginSignupButtons}</div>
           </div>
         </div>
