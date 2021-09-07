@@ -52,14 +52,14 @@
     }
   }
   &__button {
-    border-radius: 0;
-    padding: 0 16px;
-    height: 56px;
+    border-radius: 0 !important;
+    padding: 0 16px !important;
+    height: 56px !important;
     font-weight: bold;
     font-size: 14px;
     line-height: 128%;
     color: #fdfdfd;
-    background: #0e4e89;
+    background: #0e4e89 !important;
     @media screen and (max-width: 640px) {
       margin-top: 8px;
       width: 100%;
